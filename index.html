@@ -7,7 +7,40 @@
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <h1>忘れ物管理アプリ</h1>
+        <div class="app">
+            <section class="register-section">
+                <h1>忘れ物管理アプリ</h1>
+
+                <form id="item-form">
+                    <div class="form-group">
+                        <label for="item-input">忘れ物</label>
+                        <input id="item-input" type="text" name="item" placeholder="例：鍵" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pickupplace-input">拾った場所</label>
+                        <input id="pickupplace-input" type="text" name="pickupplace" placeholder="例：駅前" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date-input">発見日</label>
+                        <input id="date-input" type="date" name="date" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nowplace-input">現在の保管場所</label>
+                        <input id="nowplace-input" type="text" name="nowplace" placeholder="例：玄関" />
+                    </div>
+
+                    <button id="add-button" type="submit">追加</button>
+                </form>
+            </section>
+
+            <section class="list-section">
+                <h2>忘れ物一覧</h2>
+                <ul id="item-list" aria-live="polite"></ul>
+            </section>
+        </div>
 
         <script src="./app.js" defer></script>
     </body>
