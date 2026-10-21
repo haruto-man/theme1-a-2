@@ -19,3 +19,12 @@
 忘れ物の情報を登録したら忘れ物を一覧で表示できる
 あ
 
+item-input
+pickupplace-input
+date-input
+nowplace-input
+
+add-button
+
+item-list
+
