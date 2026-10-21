@@ -42,7 +42,8 @@
                             class="nowplace-input"
                             type="text"
                             name="nowplace"
-                            placeholder="例：玄関"
+                            placeholder="例：事務室"
+
                         />
 
                         <button id="add-button" class="add-button" type="submit">追加</button>
@@ -52,7 +53,19 @@
 
             <section class="list-section">
                 <h2>忘れ物一覧</h2>
-                <ul id="item-list" aria-live="polite"></ul>
+
+                <table class="item-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">番号</th>
+                            <th scope="col">忘れ物</th>
+                            <th scope="col">拾い物場所</th>
+                            <th scope="col">日付</th>
+                            <th scope="col">現在の場所</th>
+                        </tr>
+                    </thead>
+                    <tbody id="item-list" aria-live="polite"></tbody>
+                </table>
             </section>
         </div>
 
