@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const itemForm = document.getElementById("item-form");
     const addButton = document.getElementById("add-button");
     const itemList = document.getElementById("item-list");
 
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nowplaceInput = document.getElementById("nowplace-input");
 
     if (
+        !itemForm ||
         !addButton ||
         !itemList ||
         !itemInput ||
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    addButton.addEventListener("click", (e) => {
+    itemForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const item = itemInput.value.trim();
@@ -26,8 +28,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const date = dateInput.value.trim();
         const nowplace = nowplaceInput.value.trim();
 
-        const row = document.createElement("li");
-        row.textContent = `品目: ${item} / 受取場所: ${pickupplace} / 日付: ${date} / 現在地: ${nowplace}`;
+        const row = document.createElement("tr");
+        const numberCell = document.createElement("td");
+        const itemCell = document.createElement("td");
+        const pickupplaceCell = document.createElement("td");
+        const dateCell = document.createElement("td");
+        const nowplaceCell = document.createElement("td");
+
+        numberCell.textContent = String(itemList.children.length + 1);
+        itemCell.textContent = item || "-";
+        pickupplaceCell.textContent = pickupplace || "-";
+        dateCell.textContent = date || "-";
+        nowplaceCell.textContent = nowplace || "-";
+
+        row.appendChild(numberCell);
+        row.appendChild(itemCell);
+        row.appendChild(pickupplaceCell);
+        row.appendChild(dateCell);
+        row.appendChild(nowplaceCell);
 
         itemList.appendChild(row);
 
