@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const date = dateInput.value.trim();
         const nowplace = nowplaceInput.value.trim();
 
+        if (!item || !pickupplace || !date || !nowplace) {
+            alert("全ての項目を入力してください。");
+            return;
+        }
+
         const row = document.createElement("tr");
         const numberCell = document.createElement("td");
         const itemCell = document.createElement("td");
@@ -36,10 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const nowplaceCell = document.createElement("td");
 
         numberCell.textContent = String(itemList.children.length + 1);
-        itemCell.textContent = item || "-";
-        pickupplaceCell.textContent = pickupplace || "-";
-        dateCell.textContent = date || "-";
-        nowplaceCell.textContent = nowplace || "-";
+        itemCell.textContent = item;
+        pickupplaceCell.textContent = pickupplace;
+        dateCell.textContent = date;
+        nowplaceCell.textContent = nowplace;
 
         row.appendChild(numberCell);
         row.appendChild(itemCell);
