@@ -18,7 +18,7 @@
                             class="item-input"
                             type="text"
                             name="item"
-                            placeholder="例：鍵"
+                            placeholder="忘れ物の名前"
                             required
                         />
 
@@ -27,7 +27,7 @@
                             class="pickupplace-input"
                             type="text"
                             name="pickupplace"
-                            placeholder="例：駅前"
+                            placeholder="拾得場所"
                             required
                         />
 
@@ -44,7 +44,7 @@
                             class="nowplace-input"
                             type="text"
                             name="nowplace"
-                            placeholder="例：事務室"
+                            placeholder="保管場所"
                             required
                         />
 
@@ -57,6 +57,15 @@
                 <h2>忘れ物一覧</h2>
 
                 <table class="item-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">番号</th>
+                            <th scope="col">忘れ物</th>
+                            <th scope="col">拾得場所</th>
+                            <th scope="col">日付</th>
+                            <th scope="col">保管場所</th>
+                        </tr>
+                    </thead>
                     <tbody id="item-list" aria-live="polite"></tbody>
                 </table>
             </section>
