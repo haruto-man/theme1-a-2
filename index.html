@@ -59,18 +59,20 @@
                 <table class="item-table">
                     <thead>
                         <tr>
+                            <th scope="col">番号</th>
+
                             <th scope="col" data-column="item">
-                                <span class="th-label-wrap">
+                                <div class="th-content">
                                     <span class="th-label">落し物の名前</span>
                                     <button
                                         type="button"
                                         class="filter-button"
-                                        aria-label="名前で絞り込み"
                                         data-target="item"
+                                        aria-label="名前で絞り込み"
                                     >
                                         ▼
                                     </button>
-                                </span>
+                                </div>
 
                                 <div class="filter-popover" data-column="item">
                                     <input
@@ -79,22 +81,24 @@
                                         data-column="item"
                                         placeholder="名前で検索"
                                     />
-                                    <button type="button" class="filter-clear" data-column="item">クリア</button>
+                                    <button type="button" class="filter-clear" data-column="item">
+                                        クリア
+                                    </button>
                                 </div>
                             </th>
 
                             <th scope="col" data-column="pickupplace">
-                                <span class="th-label-wrap">
+                                <div class="th-content">
                                     <span class="th-label">拾得場所</span>
                                     <button
                                         type="button"
                                         class="filter-button"
-                                        aria-label="拾得場所で絞り込み"
                                         data-target="pickupplace"
+                                        aria-label="拾得場所で絞り込み"
                                     >
                                         ▼
                                     </button>
-                                </span>
+                                </div>
 
                                 <div class="filter-popover" data-column="pickupplace">
                                     <input
@@ -103,22 +107,24 @@
                                         data-column="pickupplace"
                                         placeholder="拾得場所で検索"
                                     />
-                                    <button type="button" class="filter-clear" data-column="pickupplace">クリア</button>
+                                    <button type="button" class="filter-clear" data-column="pickupplace">
+                                        クリア
+                                    </button>
                                 </div>
                             </th>
 
                             <th scope="col" data-column="date">
-                                <span class="th-label-wrap">
+                                <div class="th-content">
                                     <span class="th-label">日付</span>
                                     <button
                                         type="button"
                                         class="filter-button"
-                                        aria-label="日付で絞り込み"
                                         data-target="date"
+                                        aria-label="日付で絞り込み"
                                     >
                                         ▼
                                     </button>
-                                </span>
+                                </div>
 
                                 <div class="filter-popover" data-column="date">
                                     <input
@@ -127,22 +133,24 @@
                                         data-column="date"
                                         placeholder="日付で検索"
                                     />
-                                    <button type="button" class="filter-clear" data-column="date">クリア</button>
+                                    <button type="button" class="filter-clear" data-column="date">
+                                        クリア
+                                    </button>
                                 </div>
                             </th>
 
                             <th scope="col" data-column="nowplace">
-                                <span class="th-label-wrap">
+                                <div class="th-content">
                                     <span class="th-label">保管場所</span>
                                     <button
                                         type="button"
                                         class="filter-button"
-                                        aria-label="保管場所で絞り込み"
                                         data-target="nowplace"
+                                        aria-label="保管場所で絞り込み"
                                     >
                                         ▼
                                     </button>
-                                </span>
+                                </div>
 
                                 <div class="filter-popover" data-column="nowplace">
                                     <input
@@ -151,13 +159,14 @@
                                         data-column="nowplace"
                                         placeholder="保管場所で検索"
                                     />
-                                    <button type="button" class="filter-clear" data-column="nowplace">クリア</button>
+                                    <button type="button" class="filter-clear" data-column="nowplace">
+                                        クリア
+                                    </button>
                                 </div>
                             </th>
-
-                            <th scope="col"></th>
                         </tr>
                     </thead>
+
                     <tbody id="item-list" aria-live="polite"></tbody>
                 </table>
             </section>

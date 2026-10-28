@@ -109,6 +109,7 @@ h2 {
 }
 
 .item-table thead th {
+    position: relative;
     background: #edf4ff;
     color: #1f2d3d;
     font-size: 14px;
@@ -116,6 +117,7 @@ h2 {
     padding: 14px 16px;
     border-bottom: 1px solid #d0d7de;
     vertical-align: top;
+    white-space: nowrap;
 }
 
 .item-table tbody td {
@@ -133,11 +135,10 @@ h2 {
     background: #f8fbff;
 }
 
-/* セル内の見出し・ボタン */
-.th-label-wrap {
+.th-content {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .th-label {
@@ -168,14 +169,15 @@ h2 {
 .filter-popover {
     display: none;
     position: absolute;
+    left: 0;
+    top: calc(100% + 8px);
     z-index: 10;
-    margin-top: 8px;
+    width: 180px;
     padding: 8px;
     background: #fff;
     border: 1px solid #d0d7de;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    min-width: 170px;
 }
 
 .filter-popover.is-open {
