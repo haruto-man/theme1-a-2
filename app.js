@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const dateCell = document.createElement("td");
         const nowplaceCell = document.createElement("td");
 
+        numberCell.dataset.label = "番号";
+        itemCell.dataset.label = "落し物の名前";
+        pickupplaceCell.dataset.label = "拾得場所";
+        dateCell.dataset.label = "日付";
+        nowplaceCell.dataset.label = "保管場所";
+
         numberCell.textContent = String(itemList.children.length + 1);
         itemCell.textContent = item;
         pickupplaceCell.textContent = pickupplace;
