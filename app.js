@@ -39,6 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const nowplaceCell = document.createElement("td");
         const deleteCell = document.createElement("td");
 
+        itemCell.dataset.label = "落し物の名前";
+        pickupplaceCell.dataset.label = "拾得場所";
+        dateCell.dataset.label = "日付";
+        nowplaceCell.dataset.label = "保管場所";
+        deleteCell.dataset.label = "削除";
+
         itemCell.textContent = item;
         pickupplaceCell.textContent = pickupplace;
         dateCell.textContent = date;
