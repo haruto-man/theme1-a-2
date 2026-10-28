@@ -116,7 +116,6 @@ h2 {
     padding: 14px 16px;
     border-bottom: 1px solid #d0d7de;
     vertical-align: top;
-    white-space: nowrap;
 }
 
 .item-table tbody td {
@@ -206,6 +205,23 @@ h2 {
 
 .filter-clear:hover {
     background: #e0e7ff;
+}
+
+/* 削除ボタン */
+.delete-button {
+    border: none;
+    border-radius: 8px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
 }
 
 /* 画面が狭いときは表を横スクロール */
