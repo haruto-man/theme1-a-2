@@ -209,12 +209,55 @@ h2 {
 }
 
 /* 画面が狭いときは表を横スクロール */
+/* スマホでは表をやめてカード表示 */
 @media (max-width: 860px) {
     .list-section {
-        overflow-x: auto;
+        overflow: visible;
     }
 
-    .item-table {
-        min-width: 760px;
+    .item-table,
+    .item-table tbody,
+    .item-table tr,
+    .item-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .item-table thead {
+        display: none;
+    }
+
+    .item-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .item-table tbody tr {
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(31, 35, 40, 0.05);
+        padding: 12px 14px;
+    }
+
+    .item-table tbody td {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .item-table tbody td:last-child {
+        border-bottom: none;
+    }
+
+    .item-table tbody td::before {
+        content: attr(data-label);
+        width: 96px;
+        min-width: 96px;
+        font-weight: 700;
+        color: #374151;
     }
 }
