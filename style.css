@@ -170,7 +170,8 @@ h2 {
     display: none;
     position: absolute;
     left: 0;
-    top: calc(100% + 8px);
+    bottom: calc(100% + 8px);
+    top: auto;
     z-index: 10;
     width: 180px;
     padding: 8px;
