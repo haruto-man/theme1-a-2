@@ -278,4 +278,12 @@ h2 {
         font-weight: 700;
         color: #374151;
     }
+
+    .item-table tbody td.number-cell {
+        display: none;
+    }
+
+    .item-table tbody td.delete-cell::before {
+        content: none;
+    }
 }
