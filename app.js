@@ -128,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const nowplaceCell = document.createElement("td");
         const deleteCell = document.createElement("td");
 
+        deleteCell.className = "delete-cell";
+
         itemCell.textContent = item;
         pickupplaceCell.textContent = pickupplace;
         dateCell.textContent = date;
@@ -137,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pickupplaceCell.dataset.label = "拾得場所";
         dateCell.dataset.label = "日付";
         nowplaceCell.dataset.label = "保管場所";
-        deleteCell.dataset.label = "削除";
+        deleteCell.dataset.label = "";
 
         const deleteButton = document.createElement("button");
         deleteButton.type = "button";

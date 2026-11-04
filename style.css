@@ -287,5 +287,10 @@ h2 {
 
     .item-table tbody td.delete-cell::before {
         content: none;
+        display: none;
+    }
+
+    .item-table tbody td.delete-cell {
+        justify-content: flex-end;
     }
 }
