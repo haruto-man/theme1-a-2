@@ -25,15 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         nowplace: ""
     };
 
-    function updateRowNumbers() {
-        Array.from(itemList.children).forEach((row, index) => {
-            const numberCell = row.children[0];
-            if (numberCell) {
-                numberCell.textContent = String(index + 1);
-            }
-        });
-    }
-
     function hideAllPopovers() {
         document.querySelectorAll(".filter-popover").forEach((popover) => {
             popover.classList.remove("is-open");
@@ -44,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         Array.from(itemList.children).forEach((row) => {
             const cells = Array.from(row.children);
 
-            const item = (cells[1]?.textContent || "").trim().toLowerCase();
-            const pickupplace = (cells[2]?.textContent || "").trim().toLowerCase();
-            const date = (cells[3]?.textContent || "").trim();
-            const nowplace = (cells[4]?.textContent || "").trim().toLowerCase();
+            const item = (cells[0]?.textContent || "").trim().toLowerCase();
+            const pickupplace = (cells[1]?.textContent || "").trim().toLowerCase();
+            const date = (cells[2]?.textContent || "").trim();
+            const nowplace = (cells[3]?.textContent || "").trim().toLowerCase();
 
             const matches =
                 (filterState.item === "" || item.includes(filterState.item)) &&
@@ -131,14 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const row = document.createElement("tr");
 
-        const numberCell = document.createElement("td");
         const itemCell = document.createElement("td");
         const pickupplaceCell = document.createElement("td");
         const dateCell = document.createElement("td");
         const nowplaceCell = document.createElement("td");
         const deleteCell = document.createElement("td");
-
-        numberCell.textContent = String(itemList.children.length + 1);
 
         itemCell.textContent = item;
         pickupplaceCell.textContent = pickupplace;
@@ -158,13 +146,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         deleteButton.addEventListener("click", () => {
             row.remove();
-            updateRowNumbers();
             applyFilters();
         });
 
         deleteCell.appendChild(deleteButton);
 
-        row.appendChild(numberCell);
         row.appendChild(itemCell);
         row.appendChild(pickupplaceCell);
         row.appendChild(dateCell);
